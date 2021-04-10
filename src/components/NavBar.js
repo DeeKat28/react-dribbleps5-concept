@@ -30,17 +30,20 @@ const links = [
 const NavBar = () => {
   return (
     <div className="w-screen bg-gradient-to-r from-headstart via-headmid to-headend opacity-95">
-      <div className="flex justify-between items-center border-b-2 border-gray-100 py-2 md:justify-start md:space-x-10">
+      <div className="flex flex-row flex-wrap justify-between items-center">
         <Logo />
-        <nav className="pr-28">
-          <ul className="inline-flex">
+        <nav className="flex-auto">
+          <ul className="inline-flex w-full">
             {links.map((NavItem, index) => {
               return (
                 <li
                   key={index}
-                  className="px-10 mt-1 hover:bg-gray-500 transform -skew-x-12"
+                  className="flex-1 hover:bg-gray-300 transform -skew-x-12"
                 >
-                  <a className="text-gray-300" href={NavItem.navURL}>
+                  <a
+                    className="block text-center py-6 text-gray-300 hover:text-headend"
+                    href={NavItem.navURL}
+                  >
                     {NavItem.navTitle}
                   </a>
                 </li>
@@ -58,14 +61,16 @@ const NavBar = () => {
           </div> */}
         </nav>
         <GameSearch />
-        <ImEvil className="text-gray-400 transform scale-125" />
-        <ImCircleDown className="text-gray-400 transform scale-125 mx-0" />
-        <ImFire className="text-gray-400 transform scale-150 mx-8" />
-        <RiUser5Line className="text-gray-400 transform scale-150 mx-8" />
-        <div className="inline-flex pr-28">
-          <a className="text-gray-300" href="/">
-            Sign in
-          </a>
+        <div className="flex-auto inline-flex items-center place-content-evenly">
+          <ImEvil className="text-gray-400 transform scale-125 cursor-pointer" />
+          <ImCircleDown className="flex-grow-0 text-gray-400 transform scale-125 cursor-pointer" />
+          <ImFire className="text-gray-400 transform scale-150 cursor-pointer" />
+          <div className="inline-flex items-center">
+            <RiUser5Line className="text-gray-400 transform scale-150 cursor-pointer" />
+            <a className="text-gray-300 mx-5" href="/">
+              Sign in
+            </a>
+          </div>
         </div>
       </div>
     </div>

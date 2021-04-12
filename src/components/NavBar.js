@@ -29,7 +29,7 @@ const links = [
 
 const NavBar = () => {
   return (
-    <div className="w-screen bg-gradient-to-r from-headstart via-headmid to-headend opacity-95">
+    <div className="w-screen h-auto bg-gradient-to-r from-headstart via-headmid to-headend opacity-95">
       <div className="flex flex-row flex-wrap justify-between items-center">
         <Logo />
         <nav className="flex-auto">

@@ -1013,7 +1013,7 @@ module.exports = {
     ],
     textOverflow: ["responsive"],
     textTransform: ["responsive"],
-    transform: ["responsive"],
+    transform: ["responsive", "hover"],
     transformOrigin: ["responsive"],
     transitionDelay: ["responsive"],
     transitionDuration: ["responsive"],
